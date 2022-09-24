@@ -17,19 +17,14 @@ if($args.count -gt 1){
 }
 $env:GOOGLE_SERVICE_ACCOUNT="REMOVED_GCP_SERVICE_ACCOUNT_KEY"
 yarn glogin
+ThrowOnNativeFailure
 yarn add @ikomida/shared-backend@latest
 ThrowOnNativeFailure
-docker build -t us-central1-docker.pkg.dev/$projectid/docker/populate-db-image:latest . --build-arg GOOGLE_SERVICE_ACCOUNT="$env:GOOGLE_SERVICE_ACCOUNT"  --build-arg NODE_ENV=devlopment $nocache
+docker build -t us-central1-docker.pkg.dev/$projectid/docker/populate-db-image:latest . --build-arg GOOGLE_SERVICE_ACCOUNT="$env:GOOGLE_SERVICE_ACCOUNT"  --build-arg NODEENV=devlopment --build-arg PROJECT_ID=$projectid $nocache
 ThrowOnNativeFailure
 docker push us-central1-docker.pkg.dev/$projectid/docker/populate-db-image:latest
 ThrowOnNativeFailure
 kubectl -n ikomida delete Job/polupate-db
-# 
-Get-ChildItem ".\k8s\" -Filter *.yaml | 
-Foreach-Object {
-    $content = Get-Content $_.FullName
-    $content.replace('$PROJECT_ID', $projectid) | kubectl apply -f -
-}/deployment.yaml
 
 Get-ChildItem ".\k8s\" -Filter *.yaml | 
 Foreach-Object {

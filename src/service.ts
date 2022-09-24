@@ -147,8 +147,9 @@ export const initDB = async (service: any) => {
     ];
     let lastPlan: DBModels.PlanModel | undefined = undefined
     logger.info('adding/updating plans...');
+    const createPlans = (await DBModels.PlanModel.count()) === 0
     for (const plan of plans) {
-      if ((await DBModels.PlanModel.count()) === 0) {
+      if (createPlans) {
         lastPlan = await DBModels.PlanModel.create(plan);
       } else {
         await DBModels.PlanModel.update(plan, {
