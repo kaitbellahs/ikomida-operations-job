@@ -9,7 +9,7 @@ function ThrowOnNativeFailure {
 }
 $projectid="ikomida-dev"
 if($args.count -gt 0){
-    $nocache=$args[0]
+    $projectid=$args[0]
 }
 $nocache=""
 if($args.count -gt 1){
@@ -20,5 +20,15 @@ docker build -t hub.docker.internal:5000/ikomida/populate-db-image:latest . --bu
 ThrowOnNativeFailure
 docker push hub.docker.internal:5000/ikomida/populate-db-image:latest
 kubectl -n ikomida delete jobs/populate-db
-kubectl apply -f k8s-dev/deployment.yaml
-kubectl apply -f k8s-dev/service.yaml
+
+Get-ChildItem ".\k8s\" -Filter *.yaml | 
+Foreach-Object {
+    $content = Get-Content $_.FullName
+    $content.replace('$PROJECT_ID', $projectid) | kubectl apply -f -
+}-dev/deployment.yaml
+
+Get-ChildItem ".\k8s\" -Filter *.yaml | 
+Foreach-Object {
+    $content = Get-Content $_.FullName
+    $content.replace('$PROJECT_ID', $projectid) | kubectl apply -f -
+}-dev/service.yaml
