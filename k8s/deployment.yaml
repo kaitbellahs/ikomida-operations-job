@@ -11,7 +11,7 @@ spec:
     spec:
       restartPolicy: OnFailure
       containers:
-        - image: us-central1-docker.pkg.dev/ikomida-dev/docker/populate-db-image:latest
+        - image: us-central1-docker.pkg.dev/$PROJECT_ID/docker/populate-db-image:latest
           name: polupate-db
           env:
             - name: NODE_ENV
