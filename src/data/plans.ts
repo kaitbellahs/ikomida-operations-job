@@ -2,6 +2,28 @@ import { Types } from "@ikomida/shared-backend";
 
 export default [
     {
+        order: 3,
+        name: 'tialtonivel',
+        price: 500,
+        discount: 0,
+        discountType: Types.Types.TDiscount.NO,
+        staff: 1,
+        products: 15,
+        orders: 166,
+        billing: 500000,
+        support: [Types.Types.TSupport.CHAT, Types.Types.TSupport.EMAIL, Types.Types.TSupport.CALL, Types.Types.TSupport.WHATSAPP],
+        details: [
+            { key: 'Setup', value: 'gratuito' },
+            { key: 'Manutenção', value: 'R$ 0,00/mês' },
+            { key: '8h/5 dias suporte ao Cliente', value: null },
+            { key: '99.99% Uptime', value: null },
+            { key: 'atualização grátis', value: null },
+            { key: 'Migração de plano gratuito', value: null },
+            { key: '100% seguro (PCI-DSS / SSL / TLS / Digital signature / JWS)', value: null },
+        ],
+        highlighted: false,
+    },
+    {
         order: 0,
         name: 'bronze',
         price: 17500,

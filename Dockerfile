@@ -15,7 +15,7 @@ COPY package.json .eslintignore .prettierrc api-extractor.json rollup.config.ts 
 
 RUN echo "@ikomida:registry=https://us-central1-npm.pkg.dev/$PROJECT_ID/node/" >> .npmrc && echo "//us-central1-npm.pkg.dev/$PROJECT_ID/node/:always-auth=true" >> .npmrc
 
-RUN yarn glogin && yarn install
+RUN yarn glogin && yarn add @ikomida/shared-backend@latest
 
 COPY ./src ./src
 RUN yarn build

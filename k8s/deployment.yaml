@@ -69,8 +69,3 @@ spec:
                 secretKeyRef:
                   name: environment
                   key: DBPORT
-            - name: PROJID
-              valueFrom:
-                secretKeyRef:
-                  name: environment
-                  key: PROJID
