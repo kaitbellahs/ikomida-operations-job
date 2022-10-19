@@ -1,7 +1,6 @@
-
 import {
-    // generateAccessToken
-    generateNewKeyPair
+  // generateAccessToken
+  generateNewKeyPair
 } from '@ikomida/shared-backend'
 
 // generateAccessToken()
