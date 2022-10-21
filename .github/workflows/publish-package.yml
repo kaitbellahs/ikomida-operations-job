@@ -65,5 +65,5 @@ jobs:
           git push origin "v${PACKAGE_VERSION}"
       - name: Deploy
         run: |-
-          kubectl -n ikomida delete Job $NAME-$TYPE
+          kubectl -n ikomida delete Job $NAME-$TYPE || true
           for FILE in k8s/*.yaml; do printf "$(cat $FILE)\n---\n" | envsubst; done | kubectl apply -f -
