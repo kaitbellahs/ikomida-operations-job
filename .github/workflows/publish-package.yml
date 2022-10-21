@@ -1,4 +1,4 @@
-name: publish ikomida dbmanager job to artifact registry on pull request merge
+name: publish ikomida operations job to artifact registry on pull request merge
 on:
   pull_request_target:
     types:
@@ -12,7 +12,7 @@ env:
   GCLOUD_LOCATION: us-central1
   GKE_CLUSTER: ikomida-cluster
   GKE_ZONE: us-central1-b
-  NAME: dbmanager
+  NAME: operations
   TYPE: job
   TAG: latest
 
