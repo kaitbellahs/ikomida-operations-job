@@ -2,8 +2,8 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   labels:
-    app: polupate-db
-  name: polupate-db
+    app: $NAME-$TYPE
+  name: $NAME-$TYPE
   namespace: ikomida
 spec:
   backoffLimit: 2
@@ -11,8 +11,8 @@ spec:
     spec:
       restartPolicy: OnFailure
       containers:
-        - image: us-central1-docker.pkg.dev/ikomida-dev/docker/populate-db-image:latest
-          name: polupate-db
+        - image: $GCLOUD_LOCATION-docker.pkg.dev/$PROJECT_ID/docker/$NAME-$TYPE-image:$PACKAGE_VERSION
+          name: $NAME-$TYPE
           env:
             - name: NODE_ENV
               valueFrom:
@@ -69,8 +69,3 @@ spec:
                 secretKeyRef:
                   name: environment
                   key: DBPORT
-            - name: PROJID
-              valueFrom:
-                secretKeyRef:
-                  name: environment
-                  key: PROJID

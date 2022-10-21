@@ -1,9 +1,9 @@
-import { Types } from "@ikomida/shared-backend";
+import { Types } from '@ikomida/shared-backend'
 
 export default [
-    {
-        name: 'Poltica de privacidade',
-        text: `A proteção de dados é muito importante para o iKomida e faz parte da nossa missão de proporcionar um serviço cada vez melhor!<br />
+  {
+    name: 'Poltica de privacidade',
+    text: `A proteção de dados é muito importante para o iKomida e faz parte da nossa missão de proporcionar um serviço cada vez melhor!<br />
 <br />
 Conheça, nesta política, as condições de tratamento de dados dos estabelecimentos e partes relacionadas.<br />
 <br />
@@ -172,16 +172,16 @@ O iKomida poderá atualizar esta política de Privacidade periodicamente, sendo 
 Se fizermos alguma alteração na política em termos materiais, colocaremos um aviso na Plataforma ou enviaremos um e-mail, juntamente com a política de Privacidade atualizada.<br />
 <br />
 Para verificar a data da versão em vigor, verifique a “Data de publicação” no fim deste documento.`,
-        type: Types.Types.TTerm.PRIVACY_POLICY
-    },
-    {
-        name: 'Termos de Uso',
-        text: `termos de uso geral`,
-        type: Types.Types.TTerm.TERM_OF_USE_CLIENT
-    },
-    {
-        name: 'Termos e condies',
-        text: `Por meio do presente instrumento, são estabelecidos os termos e as condições gerais para a prestação de serviços (as “Condições Gerais”), os quais ficam incorporados, para todos os fins e efeitos, ao formulário de contratação do iKomida (o “Formulário” e, emconjunto com a Condições Gerais).<br /><br />
+    type: Types.Types.TTerm.PRIVACY_POLICY
+  },
+  {
+    name: 'Termos de Uso',
+    text: `termos de uso geral`,
+    type: Types.Types.TTerm.TERM_OF_USE_CLIENT
+  },
+  {
+    name: 'Termos e condies',
+    text: `Por meio do presente instrumento, são estabelecidos os termos e as condições gerais para a prestação de serviços (as “Condições Gerais”), os quais ficam incorporados, para todos os fins e efeitos, ao formulário de contratação do iKomida (o “Formulário” e, emconjunto com a Condições Gerais).<br /><br />
 <h3>1. Definições</h3>
 1.1.Os termos e as expressões abaixo, quando iniciados em letra maiúscula nestes Termos e Condições ou no Contrato, no singular ou no plural, no masculino ou no feminino, terão os significados que lhes são indicados abaixo:<br /><br />
 
@@ -223,9 +223,9 @@ Para verificar a data da versão em vigor, verifique a “Data de publicação�
 
 3.4. A Empresa reconhece e concorda que para a utilização do Software é condição indispensável que os Colaboradores: (a) possuam Contas válidas; (b) possuam smartphone ou tablet com acesso à internet ou com pacote de dados ativo; (c) façam o download do aplicativo iKomida Dashboard (“Aplicativo”) disponível na Play Store e na App Store; e (d) sejam Cadastrados pela Empresa. A Empresa deverá orientar os Colaboradores a manter o Aplicativo sempre atualizado com a última versão disponível.<br /><br />
 
-3.5. O iKomida não é responsável por quaisquer danos ou prejuízos, de qualquer forma causados à Empresa por caso fortuito ou força maior, por falhas devidas a terceiros, nem por quaisquer vírus, cavalos de Troia, ataques hacker, worms, outras rotinas de programação que possam danificar, interferir adversamente ou ser infiltrados nos equipamentos da Empresa em decorrência do acesso ou da transferência de dados, arquivos, imagens, textos ou conteúdo de áudio contidos no Software.<br /><br />
+3.5. O iKomida não é responsável por quaisquer danos ou prejuízos, de qualquer forma causados à Empresa por caso fortuito ou força maior, por falhas devidas a terceiros, nem por quaisquer vírus, cavalos de Troia, ataques hacker, worms, outras rotinas de programação que possam danificar, interferir adversamente ou ser infiltrados nos equipamentos da Empresa em decorrência do acesso ou da transferência de dados, arquivos, imagens, textos ou conteúdo de áudio contidos no Software.<br /><br />
 
-3.6. O iKomida não garante o acesso e uso ininterrupto ao Software, o qual eventualmente poderá não estar disponível por motivos técnicos, manutenções ou qualquer outra circunstância.<br /><br />
+3.6. O iKomida não garante o acesso e uso ininterrupto ao Software, o qual eventualmente poderá não estar disponível por motivos técnicos, manutenções ou qualquer outra circunstância.<br /><br />
 
 3.6.1. Em caso de manutenção programada, a Empresa será avisada antecipadamente.<br /><br />
 
@@ -311,6 +311,6 @@ Para verificar a data da versão em vigor, verifique a “Data de publicação�
 12.8. Caso a Empresa tenha assinado o Contrato por meio de qualquer ferramenta eletrônica, o iKomida poderá solicitar, a qualquer momento, que a Empresa assine e rubrique uma via física do Contrato e destas Condições Gerais. Caso a Empresa não cumpra essa solicitação do iKomida no prazo de até 5 (cinco) dias úteis contados da data de recebimento da notificação do iKomida a este respeito, o iKomida terá o direito de suspender, total ou parcialmente, os serviços descritos nestes Termos e Condições, até que a Empresa tenha cumprido tal solicitação.<br /><br />
 
 12.9. O Contrato será regido e interpretado de acordo com a legislação da República Federativa do Brasil. No caso de qualquer reivindicação ou controvérsia decorrente do Contrato, ou a eles relacionada, ou, ainda, resultante de seu inadimplemento, as Partes elegem desde já o foro da Comarca de São Paulo, Estado de São Paulo, para a solução da reivindicação ou controvérsia, com a exclusão de qualquer outro, por mais privilegiado que seja.`,
-        type: Types.Types.TTerm.TERM_OF_USE_VENDOR
-    }
+    type: Types.Types.TTerm.TERM_OF_USE_VENDOR
+  }
 ]
