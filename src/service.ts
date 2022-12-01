@@ -32,11 +32,11 @@ export const initDB = async (service: any) => {
       }
       logger.info('add  default terms . Done.')
     }
-    if ((await DBModels.UserModel.count({ where: { role: BackendTypes.Roles.ADMIN } })) === 0) {
+    if ((await DBModels.UserModel.count({ where: { role: Types.Types.TRoles.ADMIN } })) === 0) {
       logger.info('Creating default admin user...')
       await DBModels.UserModel.create({
         avatar: '',
-        role: BackendTypes.Roles.ADMIN,
+        role: Types.Types.TRoles.ADMIN,
         name: 'Khalid',
         email: 'kaitbellahs@gmail.com',
         lastName: 'Ait Bellahs',
@@ -85,7 +85,7 @@ export const initDB = async (service: any) => {
       logger.info('Creating demo Vendor...')
       await contract?.$create('user', {
         id: '00000000-0000-4000-9000-000000000000',
-        role: BackendTypes.Roles.VENDOR,
+        role: Types.Types.TRoles.VENDOR,
         name: 'Demo',
         lastName: 'Vendor',
         email: 'demo@ikomida.com',
@@ -98,7 +98,7 @@ export const initDB = async (service: any) => {
       logger.info('Creating demo user...')
       await contract?.$create('user', {
         id: '00000000-0000-4000-a000-000000000000',
-        role: BackendTypes.Roles.CLIENT,
+        role: Types.Types.TRoles.CLIENT,
         name: 'Demo',
         lastName: 'Client',
         email: 'demo@ikomida.com',
@@ -111,7 +111,7 @@ export const initDB = async (service: any) => {
       logger.info('Creating demo reseller...')
       await DBModels.UserModel.create({
         id: '00000000-0000-4000-b000-000000000000',
-        role: BackendTypes.Roles.RESELLER,
+        role: Types.Types.TRoles.RESELLER,
         name: 'Demo',
         lastName: 'Reseller',
         email: 'demo@ikomida.com',
